@@ -4,5 +4,7 @@ El objetivo es crear una herramienta genérica que permita la administración co
 
 Integrantes del equipo 17A:
 Batistuta, Axel
+
 Della Savia, Natali
+
 Hauret, Bautista
