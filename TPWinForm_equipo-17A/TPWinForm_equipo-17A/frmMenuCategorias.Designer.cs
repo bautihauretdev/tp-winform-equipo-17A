@@ -28,84 +28,84 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnCategorias = new System.Windows.Forms.Button();
-            this.btnMarcas = new System.Windows.Forms.Button();
-            this.lblMenuMarcas = new System.Windows.Forms.Label();
-            this.btnArticulos = new System.Windows.Forms.Button();
+            this.btnListarCategorias = new System.Windows.Forms.Button();
+            this.btnEliminarCategorias = new System.Windows.Forms.Button();
+            this.btnModificarCategorias = new System.Windows.Forms.Button();
+            this.lblMenuCategorias = new System.Windows.Forms.Label();
+            this.btnAgregarCategorias = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btnListarCategorias
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(201, 155);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 45);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "&Listar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnListarCategorias.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnListarCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarCategorias.Location = new System.Drawing.Point(201, 155);
+            this.btnListarCategorias.Name = "btnListarCategorias";
+            this.btnListarCategorias.Size = new System.Drawing.Size(169, 45);
+            this.btnListarCategorias.TabIndex = 15;
+            this.btnListarCategorias.Text = "&Listar";
+            this.btnListarCategorias.UseVisualStyleBackColor = true;
             // 
-            // btnCategorias
+            // btnEliminarCategorias
             // 
-            this.btnCategorias.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategorias.Location = new System.Drawing.Point(201, 350);
-            this.btnCategorias.Name = "btnCategorias";
-            this.btnCategorias.Size = new System.Drawing.Size(169, 47);
-            this.btnCategorias.TabIndex = 14;
-            this.btnCategorias.Text = "&Eliminar";
-            this.btnCategorias.UseVisualStyleBackColor = true;
+            this.btnEliminarCategorias.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnEliminarCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarCategorias.Location = new System.Drawing.Point(201, 350);
+            this.btnEliminarCategorias.Name = "btnEliminarCategorias";
+            this.btnEliminarCategorias.Size = new System.Drawing.Size(169, 47);
+            this.btnEliminarCategorias.TabIndex = 14;
+            this.btnEliminarCategorias.Text = "&Eliminar";
+            this.btnEliminarCategorias.UseVisualStyleBackColor = true;
             // 
-            // btnMarcas
+            // btnModificarCategorias
             // 
-            this.btnMarcas.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMarcas.Location = new System.Drawing.Point(201, 282);
-            this.btnMarcas.Name = "btnMarcas";
-            this.btnMarcas.Size = new System.Drawing.Size(169, 47);
-            this.btnMarcas.TabIndex = 13;
-            this.btnMarcas.Text = "&Modificar";
-            this.btnMarcas.UseVisualStyleBackColor = true;
+            this.btnModificarCategorias.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnModificarCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarCategorias.Location = new System.Drawing.Point(201, 282);
+            this.btnModificarCategorias.Name = "btnModificarCategorias";
+            this.btnModificarCategorias.Size = new System.Drawing.Size(169, 47);
+            this.btnModificarCategorias.TabIndex = 13;
+            this.btnModificarCategorias.Text = "&Modificar";
+            this.btnModificarCategorias.UseVisualStyleBackColor = true;
             // 
-            // lblMenuMarcas
+            // lblMenuCategorias
             // 
-            this.lblMenuMarcas.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblMenuMarcas.AutoSize = true;
-            this.lblMenuMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenuMarcas.Location = new System.Drawing.Point(188, 110);
-            this.lblMenuMarcas.Name = "lblMenuMarcas";
-            this.lblMenuMarcas.Size = new System.Drawing.Size(205, 29);
-            this.lblMenuMarcas.TabIndex = 12;
-            this.lblMenuMarcas.Text = "Menú Categorías";
-            this.lblMenuMarcas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblMenuCategorias.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblMenuCategorias.AutoSize = true;
+            this.lblMenuCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMenuCategorias.Location = new System.Drawing.Point(188, 110);
+            this.lblMenuCategorias.Name = "lblMenuCategorias";
+            this.lblMenuCategorias.Size = new System.Drawing.Size(205, 29);
+            this.lblMenuCategorias.TabIndex = 12;
+            this.lblMenuCategorias.Text = "Menú Categorías";
+            this.lblMenuCategorias.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnArticulos
+            // btnAgregarCategorias
             // 
-            this.btnArticulos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArticulos.Location = new System.Drawing.Point(201, 218);
-            this.btnArticulos.Name = "btnArticulos";
-            this.btnArticulos.Size = new System.Drawing.Size(169, 45);
-            this.btnArticulos.TabIndex = 11;
-            this.btnArticulos.Text = "&Agregar";
-            this.btnArticulos.UseVisualStyleBackColor = true;
+            this.btnAgregarCategorias.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAgregarCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCategorias.Location = new System.Drawing.Point(201, 218);
+            this.btnAgregarCategorias.Name = "btnAgregarCategorias";
+            this.btnAgregarCategorias.Size = new System.Drawing.Size(169, 45);
+            this.btnAgregarCategorias.TabIndex = 11;
+            this.btnAgregarCategorias.Text = "&Agregar";
+            this.btnAgregarCategorias.UseVisualStyleBackColor = true;
             // 
             // frmMenuCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(569, 530);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnCategorias);
-            this.Controls.Add(this.btnMarcas);
-            this.Controls.Add(this.lblMenuMarcas);
-            this.Controls.Add(this.btnArticulos);
+            this.Controls.Add(this.btnListarCategorias);
+            this.Controls.Add(this.btnEliminarCategorias);
+            this.Controls.Add(this.btnModificarCategorias);
+            this.Controls.Add(this.lblMenuCategorias);
+            this.Controls.Add(this.btnAgregarCategorias);
             this.MaximumSize = new System.Drawing.Size(587, 577);
             this.MinimumSize = new System.Drawing.Size(587, 577);
             this.Name = "frmMenuCategorias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu Categorías";
+            this.Text = "Menú Categorías";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,10 +113,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnCategorias;
-        private System.Windows.Forms.Button btnMarcas;
-        private System.Windows.Forms.Label lblMenuMarcas;
-        private System.Windows.Forms.Button btnArticulos;
+        private System.Windows.Forms.Button btnListarCategorias;
+        private System.Windows.Forms.Button btnEliminarCategorias;
+        private System.Windows.Forms.Button btnModificarCategorias;
+        private System.Windows.Forms.Label lblMenuCategorias;
+        private System.Windows.Forms.Button btnAgregarCategorias;
     }
 }

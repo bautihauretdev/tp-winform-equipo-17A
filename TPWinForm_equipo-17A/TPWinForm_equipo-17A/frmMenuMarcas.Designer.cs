@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCategorias = new System.Windows.Forms.Button();
-            this.btnMarcas = new System.Windows.Forms.Button();
+            this.btnEliminarMarcas = new System.Windows.Forms.Button();
+            this.btnModificarMarcas = new System.Windows.Forms.Button();
             this.lblMenuMarcas = new System.Windows.Forms.Label();
-            this.btnArticulos = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAgregarMarcas = new System.Windows.Forms.Button();
+            this.btnListarMarcas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnCategorias
+            // btnEliminarMarcas
             // 
-            this.btnCategorias.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategorias.Location = new System.Drawing.Point(201, 350);
-            this.btnCategorias.Name = "btnCategorias";
-            this.btnCategorias.Size = new System.Drawing.Size(169, 48);
-            this.btnCategorias.TabIndex = 9;
-            this.btnCategorias.Text = "&Eliminar";
-            this.btnCategorias.UseVisualStyleBackColor = true;
+            this.btnEliminarMarcas.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnEliminarMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarMarcas.Location = new System.Drawing.Point(201, 350);
+            this.btnEliminarMarcas.Name = "btnEliminarMarcas";
+            this.btnEliminarMarcas.Size = new System.Drawing.Size(169, 48);
+            this.btnEliminarMarcas.TabIndex = 9;
+            this.btnEliminarMarcas.Text = "&Eliminar";
+            this.btnEliminarMarcas.UseVisualStyleBackColor = true;
             // 
-            // btnMarcas
+            // btnModificarMarcas
             // 
-            this.btnMarcas.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMarcas.Location = new System.Drawing.Point(201, 282);
-            this.btnMarcas.Name = "btnMarcas";
-            this.btnMarcas.Size = new System.Drawing.Size(169, 48);
-            this.btnMarcas.TabIndex = 8;
-            this.btnMarcas.Text = "&Modificar";
-            this.btnMarcas.UseVisualStyleBackColor = true;
+            this.btnModificarMarcas.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnModificarMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarMarcas.Location = new System.Drawing.Point(201, 282);
+            this.btnModificarMarcas.Name = "btnModificarMarcas";
+            this.btnModificarMarcas.Size = new System.Drawing.Size(169, 48);
+            this.btnModificarMarcas.TabIndex = 8;
+            this.btnModificarMarcas.Text = "&Modificar";
+            this.btnModificarMarcas.UseVisualStyleBackColor = true;
             // 
             // lblMenuMarcas
             // 
@@ -69,43 +69,43 @@
             this.lblMenuMarcas.Text = "Menú Marcas";
             this.lblMenuMarcas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnArticulos
+            // btnAgregarMarcas
             // 
-            this.btnArticulos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArticulos.Location = new System.Drawing.Point(201, 218);
-            this.btnArticulos.Name = "btnArticulos";
-            this.btnArticulos.Size = new System.Drawing.Size(169, 46);
-            this.btnArticulos.TabIndex = 6;
-            this.btnArticulos.Text = "&Agregar";
-            this.btnArticulos.UseVisualStyleBackColor = true;
+            this.btnAgregarMarcas.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAgregarMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarMarcas.Location = new System.Drawing.Point(201, 218);
+            this.btnAgregarMarcas.Name = "btnAgregarMarcas";
+            this.btnAgregarMarcas.Size = new System.Drawing.Size(169, 46);
+            this.btnAgregarMarcas.TabIndex = 6;
+            this.btnAgregarMarcas.Text = "&Agregar";
+            this.btnAgregarMarcas.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnListarMarcas
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(201, 155);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 46);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "&Listar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnListarMarcas.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnListarMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarMarcas.Location = new System.Drawing.Point(201, 155);
+            this.btnListarMarcas.Name = "btnListarMarcas";
+            this.btnListarMarcas.Size = new System.Drawing.Size(169, 46);
+            this.btnListarMarcas.TabIndex = 10;
+            this.btnListarMarcas.Text = "&Listar";
+            this.btnListarMarcas.UseVisualStyleBackColor = true;
             // 
             // frmMenuMarcas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(569, 530);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnCategorias);
-            this.Controls.Add(this.btnMarcas);
+            this.Controls.Add(this.btnListarMarcas);
+            this.Controls.Add(this.btnEliminarMarcas);
+            this.Controls.Add(this.btnModificarMarcas);
             this.Controls.Add(this.lblMenuMarcas);
-            this.Controls.Add(this.btnArticulos);
+            this.Controls.Add(this.btnAgregarMarcas);
             this.MaximumSize = new System.Drawing.Size(587, 577);
             this.MinimumSize = new System.Drawing.Size(587, 577);
             this.Name = "frmMenuMarcas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu Marcas";
+            this.Text = "Menú Marcas";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,10 +113,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnCategorias;
-        private System.Windows.Forms.Button btnMarcas;
+        private System.Windows.Forms.Button btnEliminarMarcas;
+        private System.Windows.Forms.Button btnModificarMarcas;
         private System.Windows.Forms.Label lblMenuMarcas;
-        private System.Windows.Forms.Button btnArticulos;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAgregarMarcas;
+        private System.Windows.Forms.Button btnListarMarcas;
     }
 }

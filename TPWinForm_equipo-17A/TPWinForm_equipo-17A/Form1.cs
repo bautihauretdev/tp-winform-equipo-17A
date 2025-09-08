@@ -20,13 +20,19 @@ namespace TPWinForm_equipo_17A
         private void btnMarcas_Click(object sender, EventArgs e)
         {
             frmMenuMarcas ventanaMenuMarcas = new frmMenuMarcas();
-            ventanaMenuMarcas.Show();
+            ventanaMenuMarcas.ShowDialog();
         }
 
         private void btnCategorias_Click(object sender, EventArgs e)
         {
             frmMenuCategorias ventanaMenuCategorias = new frmMenuCategorias();
-            ventanaMenuCategorias.Show();
+            ventanaMenuCategorias.ShowDialog();
+        }
+
+        private void btnArticulos_Click(object sender, EventArgs e)
+        {
+            frmMenuArticulos ventanaMenuArticulos = new frmMenuArticulos();
+            ventanaMenuArticulos.ShowDialog();
         }
     }
 }
