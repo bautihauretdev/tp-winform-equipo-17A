@@ -1,6 +1,6 @@
 ﻿namespace TPWinForm_equipo_17A
 {
-    partial class frmMenuMarcas
+    partial class frmMenuCategorias
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.button1 = new System.Windows.Forms.Button();
             this.btnCategorias = new System.Windows.Forms.Button();
             this.btnMarcas = new System.Windows.Forms.Button();
             this.lblMenuMarcas = new System.Windows.Forms.Label();
             this.btnArticulos = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(221, 155);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(169, 45);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "&Listar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // btnCategorias
             // 
@@ -41,8 +52,8 @@
             this.btnCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategorias.Location = new System.Drawing.Point(221, 350);
             this.btnCategorias.Name = "btnCategorias";
-            this.btnCategorias.Size = new System.Drawing.Size(169, 48);
-            this.btnCategorias.TabIndex = 9;
+            this.btnCategorias.Size = new System.Drawing.Size(169, 47);
+            this.btnCategorias.TabIndex = 14;
             this.btnCategorias.Text = "&Eliminar";
             this.btnCategorias.UseVisualStyleBackColor = true;
             // 
@@ -52,8 +63,8 @@
             this.btnMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMarcas.Location = new System.Drawing.Point(221, 282);
             this.btnMarcas.Name = "btnMarcas";
-            this.btnMarcas.Size = new System.Drawing.Size(169, 48);
-            this.btnMarcas.TabIndex = 8;
+            this.btnMarcas.Size = new System.Drawing.Size(169, 47);
+            this.btnMarcas.TabIndex = 13;
             this.btnMarcas.Text = "&Modificar";
             this.btnMarcas.UseVisualStyleBackColor = true;
             // 
@@ -61,11 +72,11 @@
             // 
             this.lblMenuMarcas.AutoSize = true;
             this.lblMenuMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenuMarcas.Location = new System.Drawing.Point(224, 110);
+            this.lblMenuMarcas.Location = new System.Drawing.Point(203, 110);
             this.lblMenuMarcas.Name = "lblMenuMarcas";
-            this.lblMenuMarcas.Size = new System.Drawing.Size(166, 29);
-            this.lblMenuMarcas.TabIndex = 7;
-            this.lblMenuMarcas.Text = "Menú Marcas";
+            this.lblMenuMarcas.Size = new System.Drawing.Size(205, 29);
+            this.lblMenuMarcas.TabIndex = 12;
+            this.lblMenuMarcas.Text = "Menú Categorías";
             this.lblMenuMarcas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnArticulos
@@ -74,23 +85,12 @@
             this.btnArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnArticulos.Location = new System.Drawing.Point(221, 218);
             this.btnArticulos.Name = "btnArticulos";
-            this.btnArticulos.Size = new System.Drawing.Size(169, 46);
-            this.btnArticulos.TabIndex = 6;
+            this.btnArticulos.Size = new System.Drawing.Size(169, 45);
+            this.btnArticulos.TabIndex = 11;
             this.btnArticulos.Text = "&Agregar";
             this.btnArticulos.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(221, 155);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 46);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "&Listar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // frmMenuMarcas
+            // frmMenuCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -102,9 +102,9 @@
             this.Controls.Add(this.btnArticulos);
             this.MaximumSize = new System.Drawing.Size(627, 617);
             this.MinimumSize = new System.Drawing.Size(627, 617);
-            this.Name = "frmMenuMarcas";
+            this.Name = "frmMenuCategorias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu Marcas";
+            this.Text = "Menu Categorias";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,10 +112,10 @@
 
         #endregion
 
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCategorias;
         private System.Windows.Forms.Button btnMarcas;
         private System.Windows.Forms.Label lblMenuMarcas;
         private System.Windows.Forms.Button btnArticulos;
-        private System.Windows.Forms.Button button1;
     }
 }

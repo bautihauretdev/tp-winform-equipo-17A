@@ -54,21 +54,30 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Imagen.cs" />
-    <Compile Include="Marca.cs" />
-    <Compile Include="MenuArticulos.cs">
+    <Compile Include="frmMenuCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuArticulos.Designer.cs">
-      <DependentUpon>MenuArticulos.cs</DependentUpon>
+    <Compile Include="frmMenuCategorias.Designer.cs">
+      <DependentUpon>frmMenuCategorias.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMenuMarcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuMarcas.Designer.cs">
+      <DependentUpon>frmMenuMarcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imagen.cs" />
+    <Compile Include="Marca.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuArticulos.resx">
-      <DependentUpon>MenuArticulos.cs</DependentUpon>
+    <EmbeddedResource Include="frmMenuCategorias.resx">
+      <DependentUpon>frmMenuCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuMarcas.resx">
+      <DependentUpon>frmMenuMarcas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
