@@ -67,6 +67,7 @@
             this.btnMarcas.TabIndex = 4;
             this.btnMarcas.Text = "&Marcas";
             this.btnMarcas.UseVisualStyleBackColor = true;
+            this.btnMarcas.Click += new System.EventHandler(this.btnMarcas_Click);
             // 
             // btnCategorias
             // 
@@ -78,6 +79,7 @@
             this.btnCategorias.TabIndex = 5;
             this.btnCategorias.Text = "&Categorias";
             this.btnCategorias.UseVisualStyleBackColor = true;
+            this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
             // 
             // Form1
             // 

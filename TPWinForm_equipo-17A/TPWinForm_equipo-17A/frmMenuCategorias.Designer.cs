@@ -39,7 +39,7 @@
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(221, 155);
+            this.button1.Location = new System.Drawing.Point(201, 155);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(169, 45);
             this.button1.TabIndex = 15;
@@ -50,7 +50,7 @@
             // 
             this.btnCategorias.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategorias.Location = new System.Drawing.Point(221, 350);
+            this.btnCategorias.Location = new System.Drawing.Point(201, 350);
             this.btnCategorias.Name = "btnCategorias";
             this.btnCategorias.Size = new System.Drawing.Size(169, 47);
             this.btnCategorias.TabIndex = 14;
@@ -61,7 +61,7 @@
             // 
             this.btnMarcas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMarcas.Location = new System.Drawing.Point(221, 282);
+            this.btnMarcas.Location = new System.Drawing.Point(201, 282);
             this.btnMarcas.Name = "btnMarcas";
             this.btnMarcas.Size = new System.Drawing.Size(169, 47);
             this.btnMarcas.TabIndex = 13;
@@ -70,9 +70,10 @@
             // 
             // lblMenuMarcas
             // 
+            this.lblMenuMarcas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblMenuMarcas.AutoSize = true;
             this.lblMenuMarcas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenuMarcas.Location = new System.Drawing.Point(203, 110);
+            this.lblMenuMarcas.Location = new System.Drawing.Point(188, 110);
             this.lblMenuMarcas.Name = "lblMenuMarcas";
             this.lblMenuMarcas.Size = new System.Drawing.Size(205, 29);
             this.lblMenuMarcas.TabIndex = 12;
@@ -83,7 +84,7 @@
             // 
             this.btnArticulos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArticulos.Location = new System.Drawing.Point(221, 218);
+            this.btnArticulos.Location = new System.Drawing.Point(201, 218);
             this.btnArticulos.Name = "btnArticulos";
             this.btnArticulos.Size = new System.Drawing.Size(169, 45);
             this.btnArticulos.TabIndex = 11;
@@ -94,17 +95,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(609, 570);
+            this.ClientSize = new System.Drawing.Size(569, 530);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCategorias);
             this.Controls.Add(this.btnMarcas);
             this.Controls.Add(this.lblMenuMarcas);
             this.Controls.Add(this.btnArticulos);
-            this.MaximumSize = new System.Drawing.Size(627, 617);
-            this.MinimumSize = new System.Drawing.Size(627, 617);
+            this.MaximumSize = new System.Drawing.Size(587, 577);
+            this.MinimumSize = new System.Drawing.Size(587, 577);
             this.Name = "frmMenuCategorias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu Categorias";
+            this.Text = "Menu Categorías";
             this.ResumeLayout(false);
             this.PerformLayout();
 
