@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TPWinForm_equipo_17A
 {
-    internal class Articulo
+    public class Articulo
     {
         public int Id { get; set; }
         public string Codigo { get; set; }
@@ -24,7 +24,7 @@ namespace TPWinForm_equipo_17A
         //Constructores
         public Articulo() { }
         public Articulo(int Id, string Codigo, string Nombre, string Descripcion,decimal Precio, int idMarca, int idCategoria)
-        {
+        { 
             this.Id = Id;
             this.Codigo = Codigo;
             this.Nombre = Nombre;

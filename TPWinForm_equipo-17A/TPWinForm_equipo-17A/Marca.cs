@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TPWinForm_equipo_17A
 {
-    internal class Marca
+    public class Marca
     {
         // ATRIBUTOS
         public int id { get; set; } /// Que sea autoincrementable tomando de referencia el último que encuentre?

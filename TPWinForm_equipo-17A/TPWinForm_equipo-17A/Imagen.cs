@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TPWinForm_equipo_17A
 {
-    internal class Imagen
+    public class Imagen
     {
         /// ATRIBUTOS:
         public int Id { get; set; }
