@@ -81,6 +81,12 @@
     <Compile Include="ListadoArticuloForm.Designer.cs">
       <DependentUpon>ListadoArticuloForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListadoMarcaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoMarcaForm.Designer.cs">
+      <DependentUpon>ListadoMarcaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Marca.cs" />
     <Compile Include="MarcaNegocio.cs" />
     <Compile Include="Program.cs" />
@@ -99,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoArticuloForm.resx">
       <DependentUpon>ListadoArticuloForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoMarcaForm.resx">
+      <DependentUpon>ListadoMarcaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

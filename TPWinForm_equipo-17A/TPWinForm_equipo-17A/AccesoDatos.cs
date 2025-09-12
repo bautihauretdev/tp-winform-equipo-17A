@@ -18,7 +18,7 @@ namespace TPWinForm_equipo_17A
         public AccesoDatos()
         {
             // Cambia el nombre del servidor y la base según tu configuración
-            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security= true");
+            conexion = new SqlConnection("server=LAPTOP-3F4KD52E; database=CATALOGO_P3_DB; integrated security= true");
             comando = new SqlCommand();
         }
 

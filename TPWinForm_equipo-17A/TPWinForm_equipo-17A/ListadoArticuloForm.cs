@@ -26,11 +26,11 @@ namespace TPWinForm_equipo_17A
         {
             cargarArticulos();
         }
-            private void cargarArticulos()
+        private void cargarArticulos()
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             listaArticulos = negocio.Listar();
-           dgvArticulos.DataSource = listaArticulos.Select(a => new {
+            dgvArticulos.DataSource = listaArticulos.Select(a => new {
                 a.Id,
                 a.Codigo,
                 a.Nombre,
@@ -39,9 +39,9 @@ namespace TPWinForm_equipo_17A
                 Categoria = a.Categoria.descripcion,
                 a.Precio
             }).ToList();
-           dgvArticulos.AutoGenerateColumns = true;
+            dgvArticulos.AutoGenerateColumns = true;
             dgvArticulos.Refresh();
         }
     }
-    }
+}
 

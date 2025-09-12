@@ -22,8 +22,10 @@ namespace TPWinForm_equipo_17A
         private void btnListarMarcas_Click(object sender, EventArgs e)
         {
             MarcaNegocio negocio = new MarcaNegocio();
-            listaMarcas = negocio.Listar(); 
-            dgvMarca.DataSource = listaMarcas;
+            List<Marca> marcas = negocio.Listar();
+
+            ListadoMarcaForm vista = new ListadoMarcaForm(marcas);
+            vista.ShowDialog();
         }
     }
 }

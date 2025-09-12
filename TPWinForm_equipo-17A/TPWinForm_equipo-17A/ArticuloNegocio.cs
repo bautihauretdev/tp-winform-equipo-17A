@@ -16,7 +16,6 @@ namespace TPWinForm_equipo_17A
 
             try
             {
-
                 string consulta = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion as Marca, A.IdCategoria, C.Descripcion as Categoria, A.Precio " +
                                   "FROM ARTICULOS A " +
                                   "JOIN MARCAS M ON A.IdMarca = M.Id " +
@@ -42,7 +41,6 @@ namespace TPWinForm_equipo_17A
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
