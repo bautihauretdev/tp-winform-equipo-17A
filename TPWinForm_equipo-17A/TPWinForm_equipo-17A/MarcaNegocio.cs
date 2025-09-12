@@ -33,6 +33,47 @@ namespace TPWinForm_equipo_17A
                 throw ex;
             }
         }
-
+        public void Agregar(Marca nueva)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                string consulta = $"INSERT INTO MARCAS (Descripcion) VALUES ('{nueva.descripcion}')";
+                datos.ejecutarLectura(consulta);
+                datos.cerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public void Modificar(Marca marca)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                string consulta = $"UPDATE MARCAS SET Descripcion = '{marca.descripcion}' WHERE Id = {marca.id}";
+                datos.ejecutarLectura(consulta);
+                datos.cerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public void Eliminar(int id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                string consulta = $"DELETE FROM MARCAS WHERE Id = {id}";
+                datos.ejecutarLectura(consulta);
+                datos.cerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
