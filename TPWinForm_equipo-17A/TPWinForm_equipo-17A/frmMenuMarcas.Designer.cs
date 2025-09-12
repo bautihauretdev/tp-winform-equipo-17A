@@ -82,6 +82,7 @@
             this.btnAgregarMarcas.TabIndex = 6;
             this.btnAgregarMarcas.Text = "&Agregar";
             this.btnAgregarMarcas.UseVisualStyleBackColor = true;
+            this.btnAgregarMarcas.Click += new System.EventHandler(this.btnAgregarMarcas_Click);
             // 
             // btnListarMarcas
             // 

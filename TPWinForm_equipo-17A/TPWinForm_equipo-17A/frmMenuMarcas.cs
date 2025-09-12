@@ -27,5 +27,11 @@ namespace TPWinForm_equipo_17A
             ListadoMarcaForm vista = new ListadoMarcaForm(marcas);
             vista.ShowDialog();
         }
+
+        private void btnAgregarMarcas_Click(object sender, EventArgs e)
+        {
+            frmAgregarMarca ventanaAgregarMarca = new frmAgregarMarca();
+            ventanaAgregarMarca.ShowDialog();
+        }
     }
 }
