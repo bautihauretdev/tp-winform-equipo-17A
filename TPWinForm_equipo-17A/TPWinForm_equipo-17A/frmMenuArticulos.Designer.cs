@@ -35,8 +35,6 @@
             this.btnBuscarArticulos = new System.Windows.Forms.Button();
             this.btnEliminarArticulos = new System.Windows.Forms.Button();
             this.btnVerArticulo = new System.Windows.Forms.Button();
-            this.dgvArticulos = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.SuspendLayout();
             // 
             // btnListarArticulos
@@ -44,7 +42,7 @@
             this.btnListarArticulos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnListarArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListarArticulos.Location = new System.Drawing.Point(146, 75);
-            this.btnListarArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnListarArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.btnListarArticulos.Name = "btnListarArticulos";
             this.btnListarArticulos.Size = new System.Drawing.Size(127, 37);
             this.btnListarArticulos.TabIndex = 20;
@@ -57,7 +55,7 @@
             this.btnModificarArticulos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnModificarArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificarArticulos.Location = new System.Drawing.Point(146, 233);
-            this.btnModificarArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificarArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificarArticulos.Name = "btnModificarArticulos";
             this.btnModificarArticulos.Size = new System.Drawing.Size(127, 38);
             this.btnModificarArticulos.TabIndex = 19;
@@ -69,7 +67,7 @@
             this.btnAgregarArticulos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAgregarArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarArticulos.Location = new System.Drawing.Point(146, 178);
-            this.btnAgregarArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAgregarArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarArticulos.Name = "btnAgregarArticulos";
             this.btnAgregarArticulos.Size = new System.Drawing.Size(127, 38);
             this.btnAgregarArticulos.TabIndex = 18;
@@ -94,7 +92,7 @@
             this.btnBuscarArticulos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBuscarArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarArticulos.Location = new System.Drawing.Point(146, 126);
-            this.btnBuscarArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBuscarArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarArticulos.Name = "btnBuscarArticulos";
             this.btnBuscarArticulos.Size = new System.Drawing.Size(127, 37);
             this.btnBuscarArticulos.TabIndex = 16;
@@ -106,7 +104,7 @@
             this.btnEliminarArticulos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnEliminarArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarArticulos.Location = new System.Drawing.Point(146, 287);
-            this.btnEliminarArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminarArticulos.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminarArticulos.Name = "btnEliminarArticulos";
             this.btnEliminarArticulos.Size = new System.Drawing.Size(127, 38);
             this.btnEliminarArticulos.TabIndex = 21;
@@ -118,28 +116,18 @@
             this.btnVerArticulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnVerArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerArticulo.Location = new System.Drawing.Point(146, 340);
-            this.btnVerArticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVerArticulo.Margin = new System.Windows.Forms.Padding(2);
             this.btnVerArticulo.Name = "btnVerArticulo";
             this.btnVerArticulo.Size = new System.Drawing.Size(127, 38);
             this.btnVerArticulo.TabIndex = 22;
             this.btnVerArticulo.Text = "&Ver Artículo";
             this.btnVerArticulo.UseVisualStyleBackColor = true;
             // 
-            // dgvArticulos
-            // 
-            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticulos.Location = new System.Drawing.Point(278, 208);
-            this.dgvArticulos.Name = "dgvArticulos";
-            this.dgvArticulos.Size = new System.Drawing.Size(149, 229);
-            this.dgvArticulos.TabIndex = 23;
-            this.dgvArticulos.Tag = "dgvArticulos";
-            // 
             // frmMenuArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(428, 437);
-            this.Controls.Add(this.dgvArticulos);
             this.Controls.Add(this.btnVerArticulo);
             this.Controls.Add(this.btnEliminarArticulos);
             this.Controls.Add(this.btnListarArticulos);
@@ -147,14 +135,13 @@
             this.Controls.Add(this.btnAgregarArticulos);
             this.Controls.Add(this.lblMenuArticulos);
             this.Controls.Add(this.btnBuscarArticulos);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(444, 476);
             this.MinimumSize = new System.Drawing.Size(444, 476);
             this.Name = "frmMenuArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú Artículos";
             this.Load += new System.EventHandler(this.frmMenuArticulos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,6 +156,5 @@
         private System.Windows.Forms.Button btnBuscarArticulos;
         private System.Windows.Forms.Button btnEliminarArticulos;
         private System.Windows.Forms.Button btnVerArticulo;
-        private System.Windows.Forms.DataGridView dgvArticulos;
     }
 }

@@ -75,6 +75,12 @@
       <DependentUpon>frmMenuMarcas.cs</DependentUpon>
     </Compile>
     <Compile Include="Imagen.cs" />
+    <Compile Include="ListadoArticuloForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoArticuloForm.Designer.cs">
+      <DependentUpon>ListadoArticuloForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Marca.cs" />
     <Compile Include="MarcaNegocio.cs" />
     <Compile Include="Program.cs" />
@@ -90,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuMarcas.resx">
       <DependentUpon>frmMenuMarcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoArticuloForm.resx">
+      <DependentUpon>ListadoArticuloForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
