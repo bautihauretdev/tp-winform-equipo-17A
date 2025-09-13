@@ -17,8 +17,6 @@ namespace TPWinForm_equipo_17A
             InitializeComponent();
         }
 
-        private List<Marca> listaMarcas;
-
         private void btnListarMarcas_Click(object sender, EventArgs e)
         {
             MarcaNegocio negocio = new MarcaNegocio();

@@ -12,8 +12,11 @@ namespace TPWinForm_equipo_17A
         // ATRIBUTOS
         public int id { get; set; } /// Que sea autoincrementable tomando de referencia el último que encuentre?
         public string descripcion { get; set; }
-        
-        // CONSTRUCTOR
+
+        // CONSTRUCTOR SIN PARÁMETROS
+        public Marca() { }
+
+        // CONSTRUCTOR CON PARÁMETROS
         public Marca(int id, string descripcion)
         {
             this.id = id;

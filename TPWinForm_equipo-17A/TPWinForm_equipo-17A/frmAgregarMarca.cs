@@ -17,9 +17,28 @@ namespace TPWinForm_equipo_17A
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnAgregarMarca_Click(object sender, EventArgs e)
         {
+            Marca nuevaMarca = new Marca();
+            MarcaNegocio negocio = new MarcaNegocio();
 
+            try
+            {
+                nuevaMarca.descripcion = txtNombre.Text;
+
+                negocio.Agregar(nuevaMarca);
+                MessageBox.Show("La marca ha sido agregada exitosamente");
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
