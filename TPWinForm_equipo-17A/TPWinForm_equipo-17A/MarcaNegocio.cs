@@ -38,13 +38,16 @@ namespace TPWinForm_equipo_17A
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                string consulta = $"INSERT INTO MARCAS (Descripcion) VALUES ('{nueva.descripcion}')";
-                datos.ejecutarLectura(consulta);
-                datos.cerrarConexion();
+                datos.setearConsulta($"INSERT INTO MARCAS (Descripcion) VALUES ('{nueva.descripcion}')");
+                datos.ejecutarAccion();
             }
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
         }
         public void Modificar(Marca marca)
