@@ -13,6 +13,8 @@ namespace TPWinForm_equipo_17A
         public string descripcion { get; set; }
 
         // CONSTRUCTOR
+        public Categoria() { }
+          
         public Categoria(int id, string descripcion)
         {
             this.id = id;

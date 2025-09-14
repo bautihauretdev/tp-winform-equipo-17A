@@ -50,6 +50,7 @@
     <Compile Include="Articulo.cs" />
     <Compile Include="ArticuloNegocio.cs" />
     <Compile Include="Categoria.cs" />
+    <Compile Include="CategoriaNegocio.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +62,12 @@
     </Compile>
     <Compile Include="frmAgregarMarca.Designer.cs">
       <DependentUpon>frmAgregarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAltaArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltaArticulo.Designer.cs">
+      <DependentUpon>frmAltaArticulo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMenuArticulos.cs">
       <SubType>Form</SubType>
@@ -96,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAgregarMarca.resx">
       <DependentUpon>frmAgregarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAltaArticulo.resx">
+      <DependentUpon>frmAltaArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuArticulos.resx">
       <DependentUpon>frmMenuArticulos.cs</DependentUpon>

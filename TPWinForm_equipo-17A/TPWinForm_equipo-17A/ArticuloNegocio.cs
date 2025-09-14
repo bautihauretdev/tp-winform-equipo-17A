@@ -20,14 +20,14 @@ namespace TPWinForm_equipo_17A
                                   "FROM ARTICULOS A " +
                                   "JOIN MARCAS M ON A.IdMarca = M.Id " +
                                   "JOIN CATEGORIAS C ON A.IdCategoria = C.Id";
-                
+
                 datos.setearConsulta(consulta);
                 SqlDataReader lector = datos.ejecutarLectura();
 
                 while (lector.Read())
                 {
                     Articulo articulo = new Articulo();
-                    articulo.Id = (int)lector["Id"];   
+                    articulo.Id = (int)lector["Id"];
                     articulo.Codigo = lector[lector.GetOrdinal("Codigo")].ToString();
                     articulo.Nombre = lector["Nombre"].ToString();
                     articulo.Descripcion = lector["Descripcion"].ToString();
@@ -44,6 +44,29 @@ namespace TPWinForm_equipo_17A
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+        public void Agregar(Articulo nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("INSERT INTO ARTICULOS (Codigo, Nombre, Descripcion, Precio, IdMarca, IdCategoria) VALUES (@Codigo, @Nombre, @Descripcion, @Precio, @IdMarca, @IdCategoria)");
+                datos.setearParametro("@Codigo", nuevo.Codigo);
+                datos.setearParametro("@Nombre", nuevo.Nombre);
+                datos.setearParametro("@Descripcion", nuevo.Descripcion);
+                datos.setearParametro("@Precio", nuevo.Precio);
+                datos.setearParametro("@IdMarca", nuevo.Marca.id);
+                datos.setearParametro("@IdCategoria", nuevo.Categoria.id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
         }
     }

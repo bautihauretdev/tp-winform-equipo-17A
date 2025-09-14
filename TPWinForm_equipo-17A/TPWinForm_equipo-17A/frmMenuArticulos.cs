@@ -45,7 +45,8 @@ namespace TPWinForm_equipo_17A
 
         private void btnAgregarArticulos_Click(object sender, EventArgs e)
         {
-           
+            frmAltaArticulo alta = new frmAltaArticulo();
+            alta.ShowDialog();
         }
 
         
