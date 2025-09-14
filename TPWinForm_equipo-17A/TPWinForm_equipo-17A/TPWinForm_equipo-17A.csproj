@@ -81,12 +81,6 @@
       <DependentUpon>frmMenuMarcas.cs</DependentUpon>
     </Compile>
     <Compile Include="Imagen.cs" />
-    <Compile Include="ListadoArticuloForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListadoArticuloForm.Designer.cs">
-      <DependentUpon>ListadoArticuloForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="ListadoMarcaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,9 +105,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuMarcas.resx">
       <DependentUpon>frmMenuMarcas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ListadoArticuloForm.resx">
-      <DependentUpon>ListadoArticuloForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoMarcaForm.resx">
       <DependentUpon>ListadoMarcaForm.cs</DependentUpon>

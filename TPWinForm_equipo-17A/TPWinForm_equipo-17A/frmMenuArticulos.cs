@@ -20,20 +20,34 @@ namespace TPWinForm_equipo_17A
 
         private void frmMenuArticulos_Load(object sender, EventArgs e)
         {
-            
+            cargarArticulos();
+        }
+        private void cargarArticulos()
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            List<Articulo> articulos = negocio.Listar();
+            dgvArticulos.DataSource = articulos.Select(a => new {
+                a.Id,
+                a.Codigo,
+                a.Nombre,
+                a.Descripcion,
+                Marca = a.Marca.descripcion,
+                Categoria = a.Categoria.descripcion,
+                a.Precio
+            }).ToList();
         }
         private List<Articulo> ObtenerArticulos()
         {
             return listaArticulos ?? new List<Articulo>();
         }
 
-        private void btnListarArticulos_Click(object sender, EventArgs e)
-        {
-            ArticuloNegocio negocio = new ArticuloNegocio();
-            List<Articulo> articulos = negocio.Listar();
+       
 
-            ListadoArticuloForm vista = new ListadoArticuloForm(articulos);
-            vista.ShowDialog();
+        private void btnAgregarArticulos_Click(object sender, EventArgs e)
+        {
+           
         }
+
+        
     }
 }
