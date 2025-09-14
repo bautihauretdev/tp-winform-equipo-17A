@@ -41,5 +41,26 @@ namespace TPWinForm_equipo_17A
             frmAltaCategoria alta = new frmAltaCategoria();
             alta.ShowDialog();
         }
+
+        private void btnEliminarCategoria_Click(object sender, EventArgs e)
+        {
+            CategoriaNegocio nuevo = new CategoriaNegocio();
+            Categoria seleccionado;
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Está seguro que desea eliminar la categoría seleccionada?", "Eliminando...", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Categoria)dgvCategorias.CurrentRow.DataBoundItem;
+                    nuevo.eliminar(seleccionado.id);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }
+
