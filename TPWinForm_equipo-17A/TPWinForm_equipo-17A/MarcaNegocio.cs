@@ -17,7 +17,9 @@ namespace TPWinForm_equipo_17A
             try
             {
                 string consulta = "SELECT Id, Descripcion FROM MARCAS";
-                SqlDataReader lector = datos.ejecutarLectura(consulta);
+                datos.setearConsulta(consulta);
+                SqlDataReader lector = datos.ejecutarLectura();
+
 
                 while (lector.Read())
                 {
@@ -56,7 +58,9 @@ namespace TPWinForm_equipo_17A
             try
             {
                 string consulta = $"UPDATE MARCAS SET Descripcion = '{marca.descripcion}' WHERE Id = {marca.id}";
-                datos.ejecutarLectura(consulta);
+                datos.setearConsulta(consulta);
+                SqlDataReader lector = datos.ejecutarLectura();
+
                 datos.cerrarConexion();
             }
             catch (Exception ex)
@@ -70,7 +74,9 @@ namespace TPWinForm_equipo_17A
             try
             {
                 string consulta = $"DELETE FROM MARCAS WHERE Id = {id}";
-                datos.ejecutarLectura(consulta);
+                datos.setearConsulta(consulta);
+                SqlDataReader lector = datos.ejecutarLectura();
+
                 datos.cerrarConexion();
             }
             catch (Exception ex)

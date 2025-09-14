@@ -20,8 +20,10 @@ namespace TPWinForm_equipo_17A
                                   "FROM ARTICULOS A " +
                                   "JOIN MARCAS M ON A.IdMarca = M.Id " +
                                   "JOIN CATEGORIAS C ON A.IdCategoria = C.Id";
-                SqlDataReader lector = datos.ejecutarLectura(consulta);
                 
+                datos.setearConsulta(consulta);
+                SqlDataReader lector = datos.ejecutarLectura();
+
                 while (lector.Read())
                 {
                     Articulo articulo = new Articulo();

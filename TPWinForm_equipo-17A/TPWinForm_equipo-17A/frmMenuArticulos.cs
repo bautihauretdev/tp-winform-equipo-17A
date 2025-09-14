@@ -12,7 +12,7 @@ namespace TPWinForm_equipo_17A
 {
     public partial class frmMenuArticulos : Form
     {
-        private List<Articulo> listaArticulos;
+        private List<Articulo> listaArticulos = new List<Articulo>();
         public frmMenuArticulos()
         {
             InitializeComponent();

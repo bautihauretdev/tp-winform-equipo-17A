@@ -17,15 +17,19 @@ namespace TPWinForm_equipo_17A
 
         public AccesoDatos()
         {
-            // Cambia el nombre del servidor y la base según tu configuración
-            conexion = new SqlConnection("server=LAPTOP-3F4KD52E; database=CATALOGO_P3_DB; integrated security= true");
+            // Cambien el nombre del server si es necesario
+            conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security= true");
             comando = new SqlCommand();
         }
 
-        public SqlDataReader ejecutarLectura(string consulta)
+        public void setearConsulta(string consulta)
         {
             comando.CommandType = CommandType.Text;
             comando.CommandText = consulta;
+        }
+
+        public SqlDataReader ejecutarLectura()
+        {
             comando.Connection = conexion;
 
             try
@@ -40,12 +44,6 @@ namespace TPWinForm_equipo_17A
             }
         }
 
-        public void setearConsulta(string consulta)
-        {
-            comando.CommandType = System.Data.CommandType.Text;
-            comando.CommandText = consulta;
-        }
-
         public void ejecutarAccion()
         {
             comando.Connection = conexion;
@@ -54,9 +52,13 @@ namespace TPWinForm_equipo_17A
                 conexion.Open();
                 comando.ExecuteNonQuery();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                conexion.Close();
             }
         }
 
