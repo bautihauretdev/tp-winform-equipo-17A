@@ -13,7 +13,7 @@ namespace TPWinForm_equipo_17A
     public partial class frmMenuCategorias : Form
     {
         private List<Categoria> listaCategorias;
-
+         
         public frmMenuCategorias(List<Categoria> categorias)
         {
             InitializeComponent();
@@ -26,6 +26,7 @@ namespace TPWinForm_equipo_17A
         {
             cargarCategorias();
         }
+
         private void cargarCategorias()
         {
             CategoriaNegocio negocio = new CategoriaNegocio();
@@ -33,6 +34,12 @@ namespace TPWinForm_equipo_17A
             dgvCategorias.DataSource = listaCategorias;
             dgvCategorias.AutoGenerateColumns = true;
             dgvCategorias.Refresh();
+        }
+
+        private void btnAgregarCategorias_Click(object sender, EventArgs e)
+        {
+            frmAltaCategoria alta = new frmAltaCategoria();
+            alta.ShowDialog();
         }
     }
 }

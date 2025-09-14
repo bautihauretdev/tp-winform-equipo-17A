@@ -37,6 +37,25 @@ namespace TPWinForm_equipo_17A
                 datos.cerrarConexion();
             }
         }
+
+        public void Agregar(Categoria nueva)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta($"INSERT INTO CATEGORIAS (Descripcion) VALUES ('{nueva.descripcion}')");
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
     }
 }
    

@@ -56,6 +56,7 @@
             this.btnAgregarCategorias.TabIndex = 11;
             this.btnAgregarCategorias.Text = "&Agregar";
             this.btnAgregarCategorias.UseVisualStyleBackColor = true;
+            this.btnAgregarCategorias.Click += new System.EventHandler(this.btnAgregarCategorias_Click);
             // 
             // dgvCategorias
             // 
@@ -64,17 +65,16 @@
             this.dgvCategorias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCategorias.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
-            this.dgvCategorias.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCategorias.Location = new System.Drawing.Point(154, 44);
+            this.dgvCategorias.Location = new System.Drawing.Point(163, 43);
             this.dgvCategorias.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCategorias.Name = "dgvCategorias";
             this.dgvCategorias.ReadOnly = true;
             this.dgvCategorias.RowHeadersWidth = 51;
             this.dgvCategorias.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvCategorias.Size = new System.Drawing.Size(264, 299);
+            this.dgvCategorias.Size = new System.Drawing.Size(239, 299);
             this.dgvCategorias.TabIndex = 16;
             // 
             // btnEliminarCategoria
