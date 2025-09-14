@@ -49,9 +49,13 @@ namespace TPWinForm_equipo_17A
             Articulo seleccionado;
             try
             {
-                seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem; 
-                nuevo.eliminar(seleccionado.Id);
-               
+                DialogResult respuesta = MessageBox.Show("¿Está seguro que desea eliminar el artículo seleccionado?", "Eliminando...", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {                 
+                    seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem; 
+                    nuevo.eliminar(seleccionado.Id);
+                }
+
             }
             catch (Exception ex)
             {
