@@ -28,95 +28,89 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnListarCategorias = new System.Windows.Forms.Button();
-            this.btnEliminarCategorias = new System.Windows.Forms.Button();
             this.btnModificarCategorias = new System.Windows.Forms.Button();
-            this.lblMenuCategorias = new System.Windows.Forms.Label();
             this.btnAgregarCategorias = new System.Windows.Forms.Button();
+            this.dgvCategorias = new System.Windows.Forms.DataGridView();
+            this.btnEliminarCategoria = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnListarCategorias
-            // 
-            this.btnListarCategorias.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnListarCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarCategorias.Location = new System.Drawing.Point(201, 155);
-            this.btnListarCategorias.Name = "btnListarCategorias";
-            this.btnListarCategorias.Size = new System.Drawing.Size(169, 45);
-            this.btnListarCategorias.TabIndex = 15;
-            this.btnListarCategorias.Text = "&Listar";
-            this.btnListarCategorias.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminarCategorias
-            // 
-            this.btnEliminarCategorias.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnEliminarCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarCategorias.Location = new System.Drawing.Point(201, 350);
-            this.btnEliminarCategorias.Name = "btnEliminarCategorias";
-            this.btnEliminarCategorias.Size = new System.Drawing.Size(169, 47);
-            this.btnEliminarCategorias.TabIndex = 14;
-            this.btnEliminarCategorias.Text = "&Eliminar";
-            this.btnEliminarCategorias.UseVisualStyleBackColor = true;
             // 
             // btnModificarCategorias
             // 
             this.btnModificarCategorias.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnModificarCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarCategorias.Location = new System.Drawing.Point(201, 282);
+            this.btnModificarCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarCategorias.Location = new System.Drawing.Point(217, 402);
             this.btnModificarCategorias.Name = "btnModificarCategorias";
-            this.btnModificarCategorias.Size = new System.Drawing.Size(169, 47);
+            this.btnModificarCategorias.Size = new System.Drawing.Size(127, 37);
             this.btnModificarCategorias.TabIndex = 13;
             this.btnModificarCategorias.Text = "&Modificar";
             this.btnModificarCategorias.UseVisualStyleBackColor = true;
             // 
-            // lblMenuCategorias
-            // 
-            this.lblMenuCategorias.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblMenuCategorias.AutoSize = true;
-            this.lblMenuCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMenuCategorias.Location = new System.Drawing.Point(188, 110);
-            this.lblMenuCategorias.Name = "lblMenuCategorias";
-            this.lblMenuCategorias.Size = new System.Drawing.Size(205, 29);
-            this.lblMenuCategorias.TabIndex = 12;
-            this.lblMenuCategorias.Text = "Menú Categorías";
-            this.lblMenuCategorias.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // btnAgregarCategorias
             // 
             this.btnAgregarCategorias.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnAgregarCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarCategorias.Location = new System.Drawing.Point(201, 218);
+            this.btnAgregarCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCategorias.Location = new System.Drawing.Point(217, 359);
             this.btnAgregarCategorias.Name = "btnAgregarCategorias";
-            this.btnAgregarCategorias.Size = new System.Drawing.Size(169, 45);
+            this.btnAgregarCategorias.Size = new System.Drawing.Size(127, 37);
             this.btnAgregarCategorias.TabIndex = 11;
             this.btnAgregarCategorias.Text = "&Agregar";
             this.btnAgregarCategorias.UseVisualStyleBackColor = true;
+            // 
+            // dgvCategorias
+            // 
+            this.dgvCategorias.AllowUserToAddRows = false;
+            this.dgvCategorias.AllowUserToDeleteRows = false;
+            this.dgvCategorias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCategorias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvCategorias.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.dgvCategorias.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCategorias.Location = new System.Drawing.Point(154, 44);
+            this.dgvCategorias.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvCategorias.Name = "dgvCategorias";
+            this.dgvCategorias.ReadOnly = true;
+            this.dgvCategorias.RowHeadersWidth = 51;
+            this.dgvCategorias.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvCategorias.Size = new System.Drawing.Size(264, 299);
+            this.dgvCategorias.TabIndex = 16;
+            // 
+            // btnEliminarCategoria
+            // 
+            this.btnEliminarCategoria.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnEliminarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarCategoria.Location = new System.Drawing.Point(217, 445);
+            this.btnEliminarCategoria.Name = "btnEliminarCategoria";
+            this.btnEliminarCategoria.Size = new System.Drawing.Size(127, 37);
+            this.btnEliminarCategoria.TabIndex = 18;
+            this.btnEliminarCategoria.Text = "&Eliminar";
+            this.btnEliminarCategoria.UseVisualStyleBackColor = true;
             // 
             // frmMenuCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(569, 530);
-            this.Controls.Add(this.btnListarCategorias);
-            this.Controls.Add(this.btnEliminarCategorias);
+            this.Controls.Add(this.btnEliminarCategoria);
+            this.Controls.Add(this.dgvCategorias);
             this.Controls.Add(this.btnModificarCategorias);
-            this.Controls.Add(this.lblMenuCategorias);
             this.Controls.Add(this.btnAgregarCategorias);
             this.MaximumSize = new System.Drawing.Size(587, 577);
             this.MinimumSize = new System.Drawing.Size(587, 577);
             this.Name = "frmMenuCategorias";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menú Categorías";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCategorias)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnListarCategorias;
-        private System.Windows.Forms.Button btnEliminarCategorias;
         private System.Windows.Forms.Button btnModificarCategorias;
-        private System.Windows.Forms.Label lblMenuCategorias;
         private System.Windows.Forms.Button btnAgregarCategorias;
+        private System.Windows.Forms.DataGridView dgvCategorias;
+        private System.Windows.Forms.Button btnEliminarCategoria;
     }
 }

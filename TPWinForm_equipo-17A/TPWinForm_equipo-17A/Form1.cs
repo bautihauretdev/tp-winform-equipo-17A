@@ -25,8 +25,11 @@ namespace TPWinForm_equipo_17A
 
         private void btnCategorias_Click(object sender, EventArgs e)
         {
-            frmMenuCategorias ventanaMenuCategorias = new frmMenuCategorias();
-            ventanaMenuCategorias.ShowDialog();
+            CategoriaNegocio negocio = new CategoriaNegocio();
+            List<Categoria> categorias = negocio.Listar();
+
+            frmMenuCategorias vista = new frmMenuCategorias(categorias);
+            vista.ShowDialog();
         }
 
         private void btnArticulos_Click(object sender, EventArgs e)
