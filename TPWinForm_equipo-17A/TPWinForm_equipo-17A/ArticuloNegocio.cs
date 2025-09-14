@@ -69,5 +69,21 @@ namespace TPWinForm_equipo_17A
                 datos.cerrarConexion();
             }
         }
+
+        public void eliminar (int Id)
+        {
+            try 
+            {
+                AccesoDatos datos = new AccesoDatos();
+                datos.setearConsulta("DELETE FROM ARTICULOS WHERE Id = @Id");
+                datos.setearParametro("@Id", Id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
+    
 }

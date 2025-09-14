@@ -45,12 +45,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvArticulos.Location = new System.Drawing.Point(0, 1);
+            this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.ReadOnly = true;
+            this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(541, 143);
             this.dgvArticulos.TabIndex = 23;
-
             // 
             // btnVerArticulo
             // 
@@ -75,6 +77,7 @@
             this.btnEliminarArticulos.TabIndex = 21;
             this.btnEliminarArticulos.Text = "&Eliminar";
             this.btnEliminarArticulos.UseVisualStyleBackColor = true;
+            this.btnEliminarArticulos.Click += new System.EventHandler(this.btnEliminarArticulos_Click);
             // 
             // btnModificarArticulos
             // 

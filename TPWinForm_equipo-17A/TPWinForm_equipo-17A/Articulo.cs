@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,17 @@ namespace TPWinForm_equipo_17A
         public Marca Marca{ get; set; }
         public Categoria Categoria{ get; set; }
         public List<Imagen> Imagenes { get; set; } = new List<Imagen>();
+        
+        [DisplayName("Marca")]
+        public string NombreMarca
+        {
+            get { return Marca != null ? Marca.descripcion : ""; }
+        }
+        [DisplayName("Categoria")]
+        public string NombreCategoria
+        {
+            get { return Categoria != null ? Categoria.descripcion : ""; }
+        }
 
         //Constructores
         public Articulo() { }
