@@ -87,12 +87,6 @@
     <Compile Include="frmMenuCategorias.Designer.cs">
       <DependentUpon>frmMenuCategorias.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMenuMarcas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMenuMarcas.Designer.cs">
-      <DependentUpon>frmMenuMarcas.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmVerArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,9 +121,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuCategorias.resx">
       <DependentUpon>frmMenuCategorias.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMenuMarcas.resx">
-      <DependentUpon>frmMenuMarcas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVerArticulo.resx">
       <DependentUpon>frmVerArticulo.cs</DependentUpon>

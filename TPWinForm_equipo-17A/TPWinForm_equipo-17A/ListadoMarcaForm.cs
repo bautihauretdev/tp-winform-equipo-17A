@@ -37,8 +37,9 @@ namespace TPWinForm_equipo_17A
 
         private void btnAgregarMarca_Click(object sender, EventArgs e)
         {
-            frmAgregarMarca ventanaAgregarMarca = new frmAgregarMarca();
-            ventanaAgregarMarca.ShowDialog();
+            frmAgregarMarca ventana = new frmAgregarMarca();
+            ventana.ShowDialog();
+            cargarMarcas();
         }
 
         private void ListadoMarcaForm_Load_1(object sender, EventArgs e)
@@ -70,6 +71,17 @@ namespace TPWinForm_equipo_17A
                 MessageBox.Show(ex.ToString());
             }
             cargarMarcas();
+        }
+
+        private void btnModificarMarca_Click(object sender, EventArgs e)
+        {
+            if (dgvMarcas.CurrentRow != null)
+            {
+                Marca seleccionada = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+                frmAgregarMarca ventana = new frmAgregarMarca(seleccionada);
+                ventana.ShowDialog();
+                cargarMarcas();
+            }
         }
     }
 }
