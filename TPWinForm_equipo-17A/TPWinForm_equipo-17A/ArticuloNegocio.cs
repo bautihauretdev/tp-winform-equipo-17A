@@ -17,10 +17,12 @@ namespace TPWinForm_equipo_17A
 
             try
             {
-                string consulta = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion as Marca, A.IdCategoria, C.Descripcion as Categoria, A.Precio " +
-                                  "FROM ARTICULOS A " +
-                                  "JOIN MARCAS M ON A.IdMarca = M.Id " +
-                                  "JOIN CATEGORIAS C ON A.IdCategoria = C.Id";
+                string consulta = @"SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion as Marca, A.IdCategoria, C.Descripcion as Categoria, 
+                                    A.Precio, 
+                                    (SELECT TOP 1 ImagenUrl FROM IMAGENES I WHERE I.IdArticulo = A.Id) as ImagenUrl
+                                    FROM ARTICULOS A 
+                                    JOIN MARCAS M ON A.IdMarca = M.Id 
+                                    JOIN CATEGORIAS C ON A.IdCategoria = C.Id";
 
                 datos.setearConsulta(consulta);
                 SqlDataReader lector = datos.ejecutarLectura();
@@ -29,7 +31,7 @@ namespace TPWinForm_equipo_17A
                 {
                     Articulo articulo = new Articulo();
                     articulo.Id = (int)lector["Id"];
-                    articulo.Codigo = lector[lector.GetOrdinal("Codigo")].ToString();
+                    articulo.Codigo = lector["Codigo"].ToString();
                     articulo.Nombre = lector["Nombre"].ToString();
                     articulo.Descripcion = lector["Descripcion"].ToString();
                     articulo.Precio = (decimal)lector["Precio"];
@@ -37,6 +39,7 @@ namespace TPWinForm_equipo_17A
                     articulo.Marca = new Marca((int)lector["IdMarca"], lector["Marca"].ToString());
                     articulo.idCategoria = (int)lector["IdCategoria"];
                     articulo.Categoria = new Categoria((int)lector["IdCategoria"], lector["Categoria"].ToString());
+                    articulo.ImagenUrl = lector["ImagenUrl"] != DBNull.Value ? lector["ImagenUrl"].ToString() : null;
                     lista.Add(articulo);
                 }
                 datos.cerrarConexion();

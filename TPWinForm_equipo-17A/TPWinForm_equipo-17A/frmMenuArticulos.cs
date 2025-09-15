@@ -32,6 +32,7 @@ namespace TPWinForm_equipo_17A
             dgvArticulos.Columns["Id"].Visible = false;
             dgvArticulos.Columns["idMarca"].Visible = false;
             dgvArticulos.Columns["idCategoria"].Visible = false;
+            cargarImagen(articulos[0].ImagenUrl);
         }
         private List<Articulo> ObtenerArticulos()
         {
@@ -78,6 +79,24 @@ namespace TPWinForm_equipo_17A
             else
             {
                 MessageBox.Show("Seleccione un artículo para modificar.");
+            }
+        }
+
+        private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
+        {
+            Articulo seleccionado=(Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            cargarImagen(seleccionado.ImagenUrl);
+        }
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbxArticulo.Load(imagen);
+            }
+            catch (Exception)
+            {
+                pbxArticulo.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");   
+
             }
         }
     }

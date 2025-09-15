@@ -17,6 +17,8 @@ namespace TPWinForm_equipo_17A
         public int idCategoria { get; set; }
         public decimal Precio { get; set; }
 
+        public string ImagenUrl { get; set; }
+
         //Llamado a otras clases
         public Marca Marca{ get; set; }
         public Categoria Categoria{ get; set; }
