@@ -9,16 +9,16 @@ namespace TPWinForm_equipo_17A
     public class Categoria
     {
         // ATRIBUTOS
-        public int id { get; set; } /// Que sea autoincrementable tomando de referencia el último que encuentre?
-        public string descripcion { get; set; }
+        public int Id { get; set; }
+        public string Descripcion { get; set; }
 
         // CONSTRUCTOR
         public Categoria() { }
           
         public Categoria(int id, string descripcion)
         {
-            this.id = id;
-            this.descripcion = descripcion;
+            this.Id = id;
+            this.Descripcion = descripcion;
         }
     }
 }

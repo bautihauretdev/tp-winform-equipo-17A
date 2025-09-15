@@ -12,22 +12,58 @@ namespace TPWinForm_equipo_17A
 {
     public partial class frmAltaCategoria : Form
     {
+        private Categoria categoria = null;
         public frmAltaCategoria()
         {
             InitializeComponent();
         }
 
+        public frmAltaCategoria(Categoria categoria)
+        {
+            InitializeComponent();
+            this.categoria = categoria;
+            Text = "Modificar Categoría";
+        }
+
+        private void frmAltaCategoria_Load(object sender, EventArgs e)
+        {
+            CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
+
+            try
+            {
+                if(categoria != null)
+                {
+                    txtNombre.Text = categoria.Descripcion;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
         private void btnAgregarCategoria_Click(object sender, EventArgs e)
         {
-            Categoria nuevaCategoria = new Categoria();
             CategoriaNegocio negocio = new CategoriaNegocio();
 
             try
             {
-                nuevaCategoria.descripcion = txtNombre.Text;
+                if(categoria == null)
+                    categoria = new Categoria();
 
-                negocio.Agregar(nuevaCategoria);
-                MessageBox.Show("La categoría ha sido agregada exitosamente");
+                categoria.Descripcion = txtNombre.Text;
+
+                if(categoria.Id != 0)
+                {
+                    negocio.Modificar(categoria);
+                    MessageBox.Show("La categoría ha sido modificada exitosamente");
+                }
+                else
+                {
+                    negocio.Agregar(categoria);
+                    MessageBox.Show("La categoría ha sido agregada exitosamente");
+                }
+
                 Close();
             }
             catch (Exception ex)
@@ -40,6 +76,5 @@ namespace TPWinForm_equipo_17A
         {
             Close();
         }
-
     }
 }

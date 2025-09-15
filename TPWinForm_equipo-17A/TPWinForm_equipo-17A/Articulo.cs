@@ -30,7 +30,7 @@ namespace TPWinForm_equipo_17A
         [DisplayName("Categoria")]
         public string NombreCategoria
         {
-            get { return Categoria != null ? Categoria.descripcion : ""; }
+            get { return Categoria != null ? Categoria.Descripcion : ""; }
         }
 
         //Constructores

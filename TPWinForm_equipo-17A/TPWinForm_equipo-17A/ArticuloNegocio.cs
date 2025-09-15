@@ -57,7 +57,7 @@ namespace TPWinForm_equipo_17A
                 datos.setearParametro("@Descripcion", nuevo.Descripcion);
                 datos.setearParametro("@Precio", nuevo.Precio);
                 datos.setearParametro("@IdMarca", nuevo.Marca.id);
-                datos.setearParametro("@IdCategoria", nuevo.Categoria.id);
+                datos.setearParametro("@IdCategoria", nuevo.Categoria.Id);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

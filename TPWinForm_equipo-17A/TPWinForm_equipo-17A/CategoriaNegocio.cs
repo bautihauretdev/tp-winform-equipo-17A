@@ -21,8 +21,8 @@ namespace TPWinForm_equipo_17A
                 while (lector.Read())
                 {
                     Categoria cat = new Categoria();
-                    cat.id = (int)lector["Id"];
-                    cat.descripcion = lector["Descripcion"].ToString();
+                    cat.Id = (int)lector["Id"];
+                    cat.Descripcion = lector["Descripcion"].ToString();
                     lista.Add(cat);
                 }
 
@@ -43,7 +43,7 @@ namespace TPWinForm_equipo_17A
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.setearConsulta($"INSERT INTO CATEGORIAS (Descripcion) VALUES ('{nueva.descripcion}')");
+                datos.setearConsulta($"INSERT INTO CATEGORIAS (Descripcion) VALUES ('{nueva.Descripcion}')");
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -56,7 +56,7 @@ namespace TPWinForm_equipo_17A
             }
         }
 
-        public void eliminar(int Id)
+        public void Eliminar(int Id)
         {
             try
             {
@@ -71,6 +71,26 @@ namespace TPWinForm_equipo_17A
             }
         }
 
+        public void Modificar(Categoria cat)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE CATEGORIAS SET Descripcion = @Descripcion WHERE Id = @Id");
+                datos.setearParametro("@Id", cat.Id);
+                datos.setearParametro("@Descripcion", cat.Descripcion);
+
+                datos.ejecutarAccion();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }
    
