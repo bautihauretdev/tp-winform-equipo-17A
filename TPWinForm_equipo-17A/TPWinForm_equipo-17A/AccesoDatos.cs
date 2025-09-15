@@ -24,6 +24,7 @@ namespace TPWinForm_equipo_17A
 
         public void setearConsulta(string consulta)
         {
+            comando.Parameters.Clear();
             comando.CommandType = CommandType.Text;
             comando.CommandText = consulta;
         }

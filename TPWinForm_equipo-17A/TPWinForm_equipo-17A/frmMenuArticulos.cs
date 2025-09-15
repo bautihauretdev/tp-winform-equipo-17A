@@ -31,7 +31,8 @@ namespace TPWinForm_equipo_17A
             dgvArticulos.Columns["Categoria"].Visible = false;
             dgvArticulos.Columns["Id"].Visible = false;
             dgvArticulos.Columns["idMarca"].Visible = false;
-            dgvArticulos.Columns["idCategoria"].Visible = false;
+            dgvArticulos.Columns["idCategoria"].Visible = false;  
+            dgvArticulos.Columns["ImagenUrl"].Visible = false;
             cargarImagen(articulos[0].ImagenUrl);
         }
         private List<Articulo> ObtenerArticulos()

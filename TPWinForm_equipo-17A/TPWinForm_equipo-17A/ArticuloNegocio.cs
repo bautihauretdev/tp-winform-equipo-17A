@@ -50,7 +50,7 @@ namespace TPWinForm_equipo_17A
                 throw ex;
             }
         }
-        
+
 
         public void Agregar(Articulo nuevo)
         {
@@ -117,6 +117,49 @@ namespace TPWinForm_equipo_17A
 
                 throw ex;
                 
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        public int ObtenerIdPorCodigo(string codigo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("SELECT Id FROM ARTICULOS WHERE Codigo = @Codigo");
+                datos.setearParametro("@Codigo", codigo);
+                SqlDataReader lector = datos.ejecutarLectura();
+                if (lector.Read())
+                {
+                    return (int)lector["Id"];
+                }
+                return -1;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        public void AgregarImagen(int idArticulo, string imagenUrl)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES (@IdArticulo, @ImagenUrl)");
+                datos.setearParametro("@IdArticulo", idArticulo);
+                datos.setearParametro("@ImagenUrl", imagenUrl);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al agregar la imagen: " + ex.Message);
+                throw ex;
             }
             finally
             {

@@ -14,6 +14,7 @@ namespace TPWinForm_equipo_17A
     public partial class frmAltaArticulo : Form
     {
         private Articulo articulo = null;
+
         public frmAltaArticulo()
         {
             InitializeComponent();
@@ -56,7 +57,6 @@ namespace TPWinForm_equipo_17A
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Articulo nuevoArticulo = new Articulo();
             try
             {
                 ArticuloNegocio negocio = new ArticuloNegocio();
@@ -70,18 +70,21 @@ namespace TPWinForm_equipo_17A
                 articulo.Categoria = (Categoria)cbCategoria.SelectedItem;
                 articulo.Precio = decimal.Parse(txtPrecio.Text);
 
-                if (articulo.Id !=0)
+                if (articulo.Id != 0)
                 {
                     negocio.modificar(articulo);
                     MessageBox.Show("Artículo modificado exitosamente.");
-
                 }
                 else
                 {
                     negocio.Agregar(articulo);
+                    int nuevoId = negocio.ObtenerIdPorCodigo(articulo.Codigo); 
+                    if (nuevoId != -1 && !string.IsNullOrEmpty(txtImagen.Text))
+                    {
+                        negocio.AgregarImagen(nuevoId, txtImagen.Text);
+                    }
                     MessageBox.Show("Artículo agregado exitosamente.");
                 }
-
             }
             catch (FormatException)
             {
@@ -91,10 +94,10 @@ namespace TPWinForm_equipo_17A
             {
                 MessageBox.Show("Error al agregar el artículo: " + ex.Message);
             }
-            finally   
+            finally
             {
                 this.Close();
-            }   
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -102,5 +105,36 @@ namespace TPWinForm_equipo_17A
 
         }
 
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtImagen_Leave(object sender, EventArgs e)
+        {
+            cargarImagen(txtImagen.Text);
+        }
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+               pbxArticulos.Load(imagen);
+            }
+            catch (Exception)
+            {
+                pbxArticulos.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
+
+            }
+        }
+
+        private void btnAgregar_BackColorChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbxArticulos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

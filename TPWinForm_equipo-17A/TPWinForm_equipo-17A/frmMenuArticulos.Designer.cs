@@ -123,11 +123,12 @@
             // 
             // pbxArticulo
             // 
+            this.pbxArticulo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbxArticulo.BackColor = System.Drawing.SystemColors.Control;
             this.pbxArticulo.Location = new System.Drawing.Point(584, 12);
             this.pbxArticulo.MaximumSize = new System.Drawing.Size(849, 241);
             this.pbxArticulo.Name = "pbxArticulo";
-            this.pbxArticulo.Size = new System.Drawing.Size(187, 223);
+            this.pbxArticulo.Size = new System.Drawing.Size(187, 241);
             this.pbxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxArticulo.TabIndex = 24;
             this.pbxArticulo.TabStop = false;
@@ -145,6 +146,8 @@
             this.Controls.Add(this.btnAgregarArticulos);
             this.Controls.Add(this.btnBuscarArticulos);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(799, 479);
             this.MinimumSize = new System.Drawing.Size(444, 475);
             this.Name = "frmMenuArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
