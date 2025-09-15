@@ -30,19 +30,23 @@ namespace TPWinForm_equipo_17A
             {
                 listaArticulos = negocio.Listar();
                 dgvArticulos.DataSource = listaArticulos;
-
-                dgvArticulos.Columns["Marca"].Visible = false;
-                dgvArticulos.Columns["Categoria"].Visible = false;
-                dgvArticulos.Columns["Id"].Visible = false;
-                dgvArticulos.Columns["idMarca"].Visible = false;
-                dgvArticulos.Columns["idCategoria"].Visible = false;
-                dgvArticulos.Columns["ImagenUrl"].Visible = false;
+                ocultarColumnas();
                 cargarImagen(listaArticulos[0].ImagenUrl);
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void ocultarColumnas()
+        {
+            dgvArticulos.Columns["Marca"].Visible = false;
+            dgvArticulos.Columns["Categoria"].Visible = false;
+            dgvArticulos.Columns["Id"].Visible = false;
+            dgvArticulos.Columns["idMarca"].Visible = false;
+            dgvArticulos.Columns["idCategoria"].Visible = false;
+            dgvArticulos.Columns["ImagenUrl"].Visible = false;
         }
 
         private List<Articulo> ObtenerArticulos()
@@ -96,8 +100,11 @@ namespace TPWinForm_equipo_17A
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-            cargarImagen(seleccionado.ImagenUrl);
+            if(dgvArticulos.CurrentRow != null)
+            {
+                Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                cargarImagen(seleccionado.ImagenUrl);
+            }
         }
 
         private void cargarImagen(string imagen)
@@ -113,5 +120,30 @@ namespace TPWinForm_equipo_17A
             }
         }
 
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            List<Articulo> listaFiltrada;
+            string filtro = txtBuscar.Text;
+
+            if (filtro.Length >= 3)
+            {
+                listaFiltrada = listaArticulos.FindAll(x =>
+                    x.Codigo.ToUpper().Contains(filtro.ToUpper()) ||
+                    x.Nombre.ToUpper().Contains(filtro.ToUpper()) ||
+                    x.Descripcion.ToUpper().Contains(filtro.ToUpper()) ||
+                    x.Precio.ToString().Contains(filtro) ||
+                    x.Marca.descripcion.ToUpper().Contains(filtro.ToUpper()) ||
+                    x.Categoria.Descripcion.ToUpper().Contains(filtro.ToUpper())
+                );
+            }
+            else
+            {
+                listaFiltrada = listaArticulos;
+            }
+
+            dgvArticulos.DataSource = null;
+            dgvArticulos.DataSource = listaFiltrada;
+            ocultarColumnas();
+        }
     }
 }
