@@ -67,6 +67,7 @@ namespace TPWinForm_equipo_17A
                 {                 
                     seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem; 
                     nuevo.eliminar(seleccionado.Id);
+                    cargarArticulos();
                 }
 
             }
@@ -85,7 +86,7 @@ namespace TPWinForm_equipo_17A
                 {
                     modificar.ShowDialog();
                 }
-                cargarArticulos(); 
+                cargarArticulos();
             }
             else
             {
