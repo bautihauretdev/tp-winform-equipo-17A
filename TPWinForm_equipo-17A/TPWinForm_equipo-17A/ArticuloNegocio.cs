@@ -166,6 +166,47 @@ namespace TPWinForm_equipo_17A
                 datos.cerrarConexion();
             }
         }
+
+        public void ModificarImagen(int idArticulo, string nuevaImagenUrl)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                // Verifica si hay imagen
+                datos.setearConsulta("SELECT TOP 1 Id FROM IMAGENES WHERE IdArticulo = @IdArticulo");
+                datos.setearParametro("@IdArticulo", idArticulo);
+                var lector = datos.ejecutarLectura();
+                bool existeImagen = lector.Read();
+                datos.cerrarConexion();
+
+                if (existeImagen)
+                {
+            
+                    datos = new AccesoDatos();
+                    datos.setearConsulta("UPDATE IMAGENES SET ImagenUrl = @ImagenUrl WHERE Id = (SELECT TOP 1 Id FROM IMAGENES WHERE IdArticulo = @IdArticulo)");
+                    datos.setearParametro("@ImagenUrl", nuevaImagenUrl);
+                    datos.setearParametro("@IdArticulo", idArticulo);
+                    datos.ejecutarAccion();
+                }
+                else
+                {
+          
+                    datos = new AccesoDatos();
+                    datos.setearConsulta("INSERT INTO IMAGENES (IdArticulo, ImagenUrl) VALUES (@IdArticulo, @ImagenUrl)");
+                    datos.setearParametro("@IdArticulo", idArticulo);
+                    datos.setearParametro("@ImagenUrl", nuevaImagenUrl);
+                    datos.ejecutarAccion();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
     
 }

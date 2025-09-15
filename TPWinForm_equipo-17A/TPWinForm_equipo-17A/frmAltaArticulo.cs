@@ -73,12 +73,18 @@ namespace TPWinForm_equipo_17A
                 if (articulo.Id != 0)
                 {
                     negocio.modificar(articulo);
+
+               
+                    if (!string.IsNullOrEmpty(txtImagen.Text))
+                    {
+                        negocio.ModificarImagen(articulo.Id, txtImagen.Text);
+                    }
                     MessageBox.Show("Artículo modificado exitosamente.");
                 }
                 else
                 {
                     negocio.Agregar(articulo);
-                    int nuevoId = negocio.ObtenerIdPorCodigo(articulo.Codigo); 
+                    int nuevoId = negocio.ObtenerIdPorCodigo(articulo.Codigo);
                     if (nuevoId != -1 && !string.IsNullOrEmpty(txtImagen.Text))
                     {
                         negocio.AgregarImagen(nuevoId, txtImagen.Text);

@@ -73,9 +73,11 @@ namespace TPWinForm_equipo_17A
             if (dgvArticulos.CurrentRow != null)
             {
                 Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                frmAltaArticulo modificar = new frmAltaArticulo(seleccionado);
-                modificar.ShowDialog();
-                cargarArticulos();
+                using (frmAltaArticulo modificar = new frmAltaArticulo(seleccionado))
+                {
+                    modificar.ShowDialog();
+                }
+                cargarArticulos(); 
             }
             else
             {

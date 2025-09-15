@@ -29,11 +29,9 @@
         private void InitializeComponent()
         {
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
-            this.btnVerArticulo = new System.Windows.Forms.Button();
             this.btnEliminarArticulos = new System.Windows.Forms.Button();
             this.btnModificarArticulos = new System.Windows.Forms.Button();
             this.btnAgregarArticulos = new System.Windows.Forms.Button();
-            this.btnBuscarArticulos = new System.Windows.Forms.Button();
             this.pbxArticulo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
@@ -58,23 +56,11 @@
             this.dgvArticulos.TabIndex = 23;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
-            // btnVerArticulo
-            // 
-            this.btnVerArticulo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnVerArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnVerArticulo.Location = new System.Drawing.Point(343, 399);
-            this.btnVerArticulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnVerArticulo.Name = "btnVerArticulo";
-            this.btnVerArticulo.Size = new System.Drawing.Size(95, 30);
-            this.btnVerArticulo.TabIndex = 22;
-            this.btnVerArticulo.Text = "&Ver Artículo";
-            this.btnVerArticulo.UseVisualStyleBackColor = true;
-            // 
             // btnEliminarArticulos
             // 
             this.btnEliminarArticulos.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnEliminarArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnEliminarArticulos.Location = new System.Drawing.Point(442, 399);
+            this.btnEliminarArticulos.Location = new System.Drawing.Point(347, 399);
             this.btnEliminarArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminarArticulos.Name = "btnEliminarArticulos";
             this.btnEliminarArticulos.Size = new System.Drawing.Size(95, 30);
@@ -87,7 +73,7 @@
             // 
             this.btnModificarArticulos.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnModificarArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnModificarArticulos.Location = new System.Drawing.Point(541, 399);
+            this.btnModificarArticulos.Location = new System.Drawing.Point(476, 399);
             this.btnModificarArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnModificarArticulos.Name = "btnModificarArticulos";
             this.btnModificarArticulos.Size = new System.Drawing.Size(95, 30);
@@ -100,7 +86,7 @@
             // 
             this.btnAgregarArticulos.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnAgregarArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnAgregarArticulos.Location = new System.Drawing.Point(244, 399);
+            this.btnAgregarArticulos.Location = new System.Drawing.Point(207, 399);
             this.btnAgregarArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregarArticulos.Name = "btnAgregarArticulos";
             this.btnAgregarArticulos.Size = new System.Drawing.Size(95, 30);
@@ -108,18 +94,6 @@
             this.btnAgregarArticulos.Text = "&Agregar";
             this.btnAgregarArticulos.UseVisualStyleBackColor = true;
             this.btnAgregarArticulos.Click += new System.EventHandler(this.btnAgregarArticulos_Click);
-            // 
-            // btnBuscarArticulos
-            // 
-            this.btnBuscarArticulos.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnBuscarArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnBuscarArticulos.Location = new System.Drawing.Point(145, 399);
-            this.btnBuscarArticulos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnBuscarArticulos.Name = "btnBuscarArticulos";
-            this.btnBuscarArticulos.Size = new System.Drawing.Size(95, 30);
-            this.btnBuscarArticulos.TabIndex = 16;
-            this.btnBuscarArticulos.Text = "&Buscar";
-            this.btnBuscarArticulos.UseVisualStyleBackColor = true;
             // 
             // pbxArticulo
             // 
@@ -140,11 +114,9 @@
             this.ClientSize = new System.Drawing.Size(783, 440);
             this.Controls.Add(this.pbxArticulo);
             this.Controls.Add(this.dgvArticulos);
-            this.Controls.Add(this.btnVerArticulo);
             this.Controls.Add(this.btnEliminarArticulos);
             this.Controls.Add(this.btnModificarArticulos);
             this.Controls.Add(this.btnAgregarArticulos);
-            this.Controls.Add(this.btnBuscarArticulos);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(799, 479);
@@ -161,11 +133,9 @@
 
         #endregion
         private System.Windows.Forms.DataGridView dgvArticulos;
-        private System.Windows.Forms.Button btnVerArticulo;
         private System.Windows.Forms.Button btnEliminarArticulos;
         private System.Windows.Forms.Button btnModificarArticulos;
         private System.Windows.Forms.Button btnAgregarArticulos;
-        private System.Windows.Forms.Button btnBuscarArticulos;
         private System.Windows.Forms.PictureBox pbxArticulo;
     }
 }
