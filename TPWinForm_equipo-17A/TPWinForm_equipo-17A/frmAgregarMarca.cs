@@ -62,9 +62,20 @@ namespace TPWinForm_equipo_17A
 
         private void frmAgregarMarca_Load(object sender, EventArgs e)
         {
-            if(marca != null)
+            if (marca != null && marca.id != 0)
             {
+              
                 txtNombre.Text = marca.descripcion;
+                this.Text = "Modificar marca"; 
+                lblAgregarMarca.Text = "Modificar marca"; 
+                btnAgregarMarca.Text = "Modificar"; 
+            }
+            else
+            {
+              
+                this.Text = "Agregar nueva marca";
+                lblAgregarMarca.Text = "Agregar nueva marca";
+                btnAgregarMarca.Text = "Agregar";
             }
         }
 

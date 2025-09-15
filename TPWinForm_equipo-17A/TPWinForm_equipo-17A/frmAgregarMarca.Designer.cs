@@ -62,12 +62,12 @@
             // 
             // btnAgregarMarca
             // 
-            this.btnAgregarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarMarca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnAgregarMarca.Location = new System.Drawing.Point(17, 205);
+            this.btnAgregarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnAgregarMarca.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregarMarca.Location = new System.Drawing.Point(17, 211);
             this.btnAgregarMarca.Margin = new System.Windows.Forms.Padding(2);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
-            this.btnAgregarMarca.Size = new System.Drawing.Size(90, 32);
+            this.btnAgregarMarca.Size = new System.Drawing.Size(90, 26);
             this.btnAgregarMarca.TabIndex = 2;
             this.btnAgregarMarca.Text = "Agregar";
             this.btnAgregarMarca.UseVisualStyleBackColor = true;
@@ -75,20 +75,20 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(111, 82);
+            this.txtNombre.Location = new System.Drawing.Point(111, 80);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(127, 20);
+            this.txtNombre.Size = new System.Drawing.Size(139, 20);
             this.txtNombre.TabIndex = 3;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.Maroon;
-            this.btnCancelar.Location = new System.Drawing.Point(174, 205);
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnCancelar.ForeColor = System.Drawing.Color.Black;
+            this.btnCancelar.Location = new System.Drawing.Point(174, 211);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(90, 32);
+            this.btnCancelar.Size = new System.Drawing.Size(90, 26);
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -98,13 +98,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(286, 248);
+            this.ClientSize = new System.Drawing.Size(286, 251);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.btnAgregarMarca);
             this.Controls.Add(this.lblAgregarMarca);
             this.Controls.Add(this.lblNombreMarca);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(302, 290);
             this.Name = "frmAgregarMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Marca";

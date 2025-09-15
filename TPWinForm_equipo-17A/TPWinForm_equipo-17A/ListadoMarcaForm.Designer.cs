@@ -42,7 +42,7 @@
             this.dgvMarcas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvMarcas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvMarcas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMarcas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dgvMarcas.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -51,15 +51,16 @@
             this.dgvMarcas.ReadOnly = true;
             this.dgvMarcas.RowHeadersWidth = 51;
             this.dgvMarcas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvMarcas.Size = new System.Drawing.Size(354, 180);
+            this.dgvMarcas.Size = new System.Drawing.Size(360, 206);
             this.dgvMarcas.TabIndex = 1;
             this.dgvMarcas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMarcas_CellContentClick);
             // 
             // btnAgregarMarca
             // 
-            this.btnAgregarMarca.Location = new System.Drawing.Point(12, 310);
+            this.btnAgregarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnAgregarMarca.Location = new System.Drawing.Point(47, 342);
             this.btnAgregarMarca.Name = "btnAgregarMarca";
-            this.btnAgregarMarca.Size = new System.Drawing.Size(69, 32);
+            this.btnAgregarMarca.Size = new System.Drawing.Size(81, 27);
             this.btnAgregarMarca.TabIndex = 2;
             this.btnAgregarMarca.Text = "Agregar";
             this.btnAgregarMarca.UseVisualStyleBackColor = true;
@@ -67,9 +68,10 @@
             // 
             // btnModificarMarca
             // 
-            this.btnModificarMarca.Location = new System.Drawing.Point(142, 310);
+            this.btnModificarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnModificarMarca.Location = new System.Drawing.Point(134, 342);
             this.btnModificarMarca.Name = "btnModificarMarca";
-            this.btnModificarMarca.Size = new System.Drawing.Size(71, 32);
+            this.btnModificarMarca.Size = new System.Drawing.Size(81, 27);
             this.btnModificarMarca.TabIndex = 3;
             this.btnModificarMarca.Text = " Modificar  ";
             this.btnModificarMarca.UseVisualStyleBackColor = true;
@@ -77,9 +79,10 @@
             // 
             // btnEliminarMarca
             // 
-            this.btnEliminarMarca.Location = new System.Drawing.Point(276, 312);
+            this.btnEliminarMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnEliminarMarca.Location = new System.Drawing.Point(221, 342);
             this.btnEliminarMarca.Name = "btnEliminarMarca";
-            this.btnEliminarMarca.Size = new System.Drawing.Size(65, 28);
+            this.btnEliminarMarca.Size = new System.Drawing.Size(81, 27);
             this.btnEliminarMarca.TabIndex = 4;
             this.btnEliminarMarca.Text = "Eliminar ";
             this.btnEliminarMarca.UseVisualStyleBackColor = true;
@@ -87,15 +90,16 @@
             // 
             // ListadoMarcaForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(353, 355);
+            this.ClientSize = new System.Drawing.Size(359, 381);
             this.Controls.Add(this.btnEliminarMarca);
             this.Controls.Add(this.btnModificarMarca);
             this.Controls.Add(this.btnAgregarMarca);
             this.Controls.Add(this.dgvMarcas);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(375, 420);
             this.Name = "ListadoMarcaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu De Marcas";
