@@ -45,5 +45,10 @@ namespace TPWinForm_equipo_17A
         {
 
         }
+
+        private void lblAgregarMarca_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -37,8 +37,8 @@ namespace TPWinForm_equipo_17A
 
         private void btnAgregarMarca_Click(object sender, EventArgs e)
         {
-            Marca nuevaMarca = new Marca();
-            MarcaNegocio negocio = new MarcaNegocio();
+            frmAgregarMarca ventanaAgregarMarca = new frmAgregarMarca();
+            ventanaAgregarMarca.ShowDialog();
         }
 
         private void ListadoMarcaForm_Load_1(object sender, EventArgs e)
