@@ -50,5 +50,26 @@ namespace TPWinForm_equipo_17A
         {
 
         }
+
+        private void btnEliminarMarca_Click(object sender, EventArgs e)
+        {
+            MarcaNegocio nuevo = new MarcaNegocio();
+            Marca seleccionado;
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Está seguro que desea eliminar la categoría seleccionada?", "Eliminando...", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+                    nuevo.Eliminar(seleccionado.id);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            cargarMarcas();
+        }
     }
 }

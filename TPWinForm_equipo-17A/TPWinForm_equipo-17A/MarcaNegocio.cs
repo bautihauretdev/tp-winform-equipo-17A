@@ -73,9 +73,10 @@ namespace TPWinForm_equipo_17A
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                string consulta = $"DELETE FROM MARCAS WHERE Id = {id}";
+                string consulta = "DELETE FROM MARCAS WHERE Id = @Id";
                 datos.setearConsulta(consulta);
-                SqlDataReader lector = datos.ejecutarLectura();
+                datos.setearParametro("@Id", id);
+                datos.ejecutarAccion();
 
                 datos.cerrarConexion();
             }

@@ -82,6 +82,7 @@
             this.btnEliminarMarca.TabIndex = 4;
             this.btnEliminarMarca.Text = "Eliminar Marca";
             this.btnEliminarMarca.UseVisualStyleBackColor = true;
+            this.btnEliminarMarca.Click += new System.EventHandler(this.btnEliminarMarca_Click);
             // 
             // ListadoMarcaForm
             // 
@@ -93,7 +94,7 @@
             this.Controls.Add(this.btnModificarMarca);
             this.Controls.Add(this.btnAgregarMarca);
             this.Controls.Add(this.dgvMarcas);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ListadoMarcaForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu De Marcas";
