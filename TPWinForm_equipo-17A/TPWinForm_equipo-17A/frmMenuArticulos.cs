@@ -12,7 +12,8 @@ namespace TPWinForm_equipo_17A
 {
     public partial class frmMenuArticulos : Form
     {
-        private List<Articulo> listaArticulos = new List<Articulo>();
+        private List<Articulo> listaArticulos;
+        
         public frmMenuArticulos()
         {
             InitializeComponent();
@@ -25,22 +26,29 @@ namespace TPWinForm_equipo_17A
         private void cargarArticulos()
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
-            List<Articulo> articulos = negocio.Listar();
-            dgvArticulos.DataSource = articulos;
-            dgvArticulos.Columns["Marca"].Visible = false;
-            dgvArticulos.Columns["Categoria"].Visible = false;
-            dgvArticulos.Columns["Id"].Visible = false;
-            dgvArticulos.Columns["idMarca"].Visible = false;
-            dgvArticulos.Columns["idCategoria"].Visible = false;  
-            dgvArticulos.Columns["ImagenUrl"].Visible = false;
-            cargarImagen(articulos[0].ImagenUrl);
+            try
+            {
+                listaArticulos = negocio.Listar();
+                dgvArticulos.DataSource = listaArticulos;
+
+                dgvArticulos.Columns["Marca"].Visible = false;
+                dgvArticulos.Columns["Categoria"].Visible = false;
+                dgvArticulos.Columns["Id"].Visible = false;
+                dgvArticulos.Columns["idMarca"].Visible = false;
+                dgvArticulos.Columns["idCategoria"].Visible = false;
+                dgvArticulos.Columns["ImagenUrl"].Visible = false;
+                cargarImagen(listaArticulos[0].ImagenUrl);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
+
         private List<Articulo> ObtenerArticulos()
         {
             return listaArticulos ?? new List<Articulo>();
         }
-
-
 
         private void btnAgregarArticulos_Click(object sender, EventArgs e)
         {
@@ -87,9 +95,10 @@ namespace TPWinForm_equipo_17A
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
-            Articulo seleccionado=(Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             cargarImagen(seleccionado.ImagenUrl);
         }
+
         private void cargarImagen(string imagen)
         {
             try
@@ -102,5 +111,6 @@ namespace TPWinForm_equipo_17A
 
             }
         }
+
     }
 }
