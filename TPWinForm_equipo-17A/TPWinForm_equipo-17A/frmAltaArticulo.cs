@@ -13,22 +13,40 @@ namespace TPWinForm_equipo_17A
 {
     public partial class frmAltaArticulo : Form
     {
+        private Articulo articulo = null;
         public frmAltaArticulo()
         {
             InitializeComponent();
         }
+        public frmAltaArticulo(Articulo articulo)
+        {
+            InitializeComponent();
+            this.articulo = articulo;
+        }
+
         private void frmAltaArticulo_Load(object sender, EventArgs e)
         {
             MarcaNegocio marcaNegocio = new MarcaNegocio(); 
             CategoriaNegocio categoriaNegocio = new CategoriaNegocio(); 
             cbMarca.DataSource = marcaNegocio.Listar();
-            cbMarca.DisplayMember = "Descripcion";
-            cbMarca.ValueMember = "Id";
+            cbMarca.DisplayMember = "descripcion";
+            cbMarca.ValueMember = "id";
 
             cbCategoria.DataSource = categoriaNegocio.Listar();
             cbCategoria.DisplayMember = "Descripcion";
             cbCategoria.ValueMember = "Id";
 
+            if (articulo!= null)
+            {
+                txtCodigo.Text = articulo.Codigo;
+                txtNombre.Text = articulo.Nombre;
+                txtDescripcion.Text = articulo.Descripcion;
+                txtPrecio.Text = articulo.Precio.ToString();
+                cbMarca.SelectedValue = articulo.Marca.id;
+                cbCategoria.SelectedValue = articulo.Categoria.Id;
+                btnAgregar.Text = "Modificar";
+                this.Text = "Modificar Artículo";
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -41,16 +59,28 @@ namespace TPWinForm_equipo_17A
             Articulo nuevoArticulo = new Articulo();
             try
             {
-                nuevoArticulo.Codigo = txtCodigo.Text;
-                nuevoArticulo.Codigo = txtCodigo.Text;
-                nuevoArticulo.Nombre = txtNombre.Text;
-                nuevoArticulo.Descripcion = txtDescripcion.Text;
-                nuevoArticulo.Marca = (Marca)cbMarca.SelectedItem;
-                nuevoArticulo.Categoria = (Categoria)cbCategoria.SelectedItem;
-                nuevoArticulo.Precio = decimal.Parse(txtPrecio.Text);
                 ArticuloNegocio negocio = new ArticuloNegocio();
-                negocio.Agregar(nuevoArticulo);
-                MessageBox.Show("Artículo agregado exitosamente.");
+                if (articulo == null)
+                    articulo = new Articulo();
+
+                articulo.Codigo = txtCodigo.Text;
+                articulo.Nombre = txtNombre.Text;
+                articulo.Descripcion = txtDescripcion.Text;
+                articulo.Marca = (Marca)cbMarca.SelectedItem;
+                articulo.Categoria = (Categoria)cbCategoria.SelectedItem;
+                articulo.Precio = decimal.Parse(txtPrecio.Text);
+
+                if (articulo.Id !=0)
+                {
+                    negocio.modificar(articulo);
+                    MessageBox.Show("Artículo modificado exitosamente.");
+
+                }
+                else
+                {
+                    negocio.Agregar(articulo);
+                    MessageBox.Show("Artículo agregado exitosamente.");
+                }
 
             }
             catch (FormatException)

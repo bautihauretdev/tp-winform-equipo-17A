@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace TPWinForm_equipo_17A
 {
@@ -46,6 +47,8 @@ namespace TPWinForm_equipo_17A
                 throw ex;
             }
         }
+        
+
         public void Agregar(Articulo nuevo)
         {
             AccesoDatos datos = new AccesoDatos();
@@ -56,8 +59,15 @@ namespace TPWinForm_equipo_17A
                 datos.setearParametro("@Nombre", nuevo.Nombre);
                 datos.setearParametro("@Descripcion", nuevo.Descripcion);
                 datos.setearParametro("@Precio", nuevo.Precio);
+
+                if (nuevo.Marca == null)
+                    throw new ArgumentNullException("Marca", "El objeto Marca no puede ser null.");
                 datos.setearParametro("@IdMarca", nuevo.Marca.id);
+
+                if (nuevo.Categoria == null)
+                    throw new ArgumentNullException("Categoria", "El objeto Categoria no puede ser null.");
                 datos.setearParametro("@IdCategoria", nuevo.Categoria.Id);
+
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
@@ -82,6 +92,32 @@ namespace TPWinForm_equipo_17A
             catch (Exception ex)
             {
                 throw ex;
+            }
+        }
+        public void modificar (Articulo articulo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("UPDATE ARTICULOS SET Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, Precio = @Precio, IdMarca = @IdMarca, IdCategoria = @IdCategoria WHERE Id = @Id");
+                datos.setearParametro("@Codigo", articulo.Codigo);
+                datos.setearParametro("@Nombre", articulo.Nombre);
+                datos.setearParametro("@Descripcion", articulo.Descripcion);
+                datos.setearParametro("@Precio", articulo.Precio);
+                datos.setearParametro("@IdMarca", articulo.Marca.id);
+                datos.setearParametro("@IdCategoria", articulo.Categoria.Id);
+                datos.setearParametro("@Id", articulo.Id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+                
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
         }
     }

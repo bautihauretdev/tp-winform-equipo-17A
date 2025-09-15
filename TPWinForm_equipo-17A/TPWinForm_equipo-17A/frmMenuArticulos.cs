@@ -29,6 +29,9 @@ namespace TPWinForm_equipo_17A
             dgvArticulos.DataSource = articulos;
             dgvArticulos.Columns["Marca"].Visible = false;
             dgvArticulos.Columns["Categoria"].Visible = false;
+            dgvArticulos.Columns["Id"].Visible = false;
+            dgvArticulos.Columns["idMarca"].Visible = false;
+            dgvArticulos.Columns["idCategoria"].Visible = false;
         }
         private List<Articulo> ObtenerArticulos()
         {
@@ -60,6 +63,21 @@ namespace TPWinForm_equipo_17A
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btnModificarArticulos_Click(object sender, EventArgs e)
+        {
+            if (dgvArticulos.CurrentRow != null)
+            {
+                Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                frmAltaArticulo modificar = new frmAltaArticulo(seleccionado);
+                modificar.ShowDialog();
+                cargarArticulos();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un artículo para modificar.");
             }
         }
     }
