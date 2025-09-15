@@ -145,5 +145,22 @@ namespace TPWinForm_equipo_17A
             dgvArticulos.DataSource = listaFiltrada;
             ocultarColumnas();
         }
+
+        private void btnVerArticulo_Click(object sender, EventArgs e)
+        {
+            if (dgvArticulos.CurrentRow != null)
+            {
+                Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                using (frmVerArticulo verArticulo = new frmVerArticulo(seleccionado))
+                {
+                    verArticulo.ShowDialog();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un artículo para ver.");
+            }
+
+        }
     }
 }
