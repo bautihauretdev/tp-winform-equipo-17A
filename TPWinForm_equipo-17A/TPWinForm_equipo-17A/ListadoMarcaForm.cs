@@ -34,5 +34,21 @@ namespace TPWinForm_equipo_17A
             dgvMarcas.AutoGenerateColumns = true;
             dgvMarcas.Refresh();
         }
+
+        private void btnAgregarMarca_Click(object sender, EventArgs e)
+        {
+            Marca nuevaMarca = new Marca();
+            MarcaNegocio negocio = new MarcaNegocio();
+        }
+
+        private void ListadoMarcaForm_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvMarcas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

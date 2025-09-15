@@ -19,8 +19,11 @@ namespace TPWinForm_equipo_17A
 
         private void btnMarcas_Click(object sender, EventArgs e)
         {
-            frmMenuMarcas ventanaMenuMarcas = new frmMenuMarcas();
-            ventanaMenuMarcas.ShowDialog();
+            MarcaNegocio negocio = new MarcaNegocio();
+            List<Marca> marcas = negocio.Listar();
+
+            ListadoMarcaForm vista = new ListadoMarcaForm(marcas);
+            vista.ShowDialog();
         }
 
         private void btnCategorias_Click(object sender, EventArgs e)

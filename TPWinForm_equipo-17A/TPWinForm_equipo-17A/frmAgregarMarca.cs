@@ -40,5 +40,10 @@ namespace TPWinForm_equipo_17A
         {
             Close();
         }
+
+        private void frmAgregarMarca_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
